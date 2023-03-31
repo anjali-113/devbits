@@ -1,0 +1,864 @@
+/*****************/
+/* HEADER */
+/*****************/
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 9.6rem;
+  background-color: #eae9fd;
+  padding: 0 4.8rem;
+  position: relative;
+}
+
+.logo {
+  height: 2.2rem;
+}
+
+/******************/
+/* NAVIGATION */
+/*****************/
+
+.main-nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 4.8rem;
+}
+
+.main-nav-link:link,
+.main-nav-link:visited {
+  display: inline-block;
+  text-decoration: none;
+  color: #333333;
+  font-size: 1.8rem;
+  font-weight: 500;
+  transition: all 0.3s linear;
+}
+
+.main-nav-link:hover,
+.main-nav-link:active {
+  color: #0d05a0;
+}
+
+.main-nav-link.nav-cta:link,
+.main-nav-link.nav-cta:visited {
+  color: #ffffff;
+  background-color: #0d05a0;
+  padding: 1.2rem 2.4rem;
+  border-radius: 9px;
+}
+
+.main-nav-link.nav-cta:hover,
+.main-nav-link.nav-cta:active {
+  background-color: #0d05a0;
+}
+
+/* MOBILE NAVIGATION */
+
+.btn-mobile-nav {
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: none;
+}
+
+.icon-mobile-nav {
+  height: 4.8rem;
+  width: 4.8rem;
+  color: #333;
+}
+
+.icon-mobile-nav[name="close-outline"] {
+  display: none;
+}
+
+/* STICKY NAVIGATION */
+
+.sticky .header {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  height: 8rem;
+  width: 100%;
+  padding-top: 0;
+  padding-bottom: 0;
+  background-color: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03);
+  z-index: 999;
+}
+
+.sticky .section-hero {
+  margin-top: 9.6rem;
+}
+
+/*******************/
+/* HERO SECTION */
+/*******************/
+
+.section-hero {
+  background-color: #eae9fd;
+  padding: 4.8rem 0 9.6rem 0;
+}
+
+.hero {
+  max-width: 130rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 9.6rem;
+  align-items: center;
+}
+
+.hero-description {
+  font-size: 2rem;
+  line-height: 1.6;
+  margin-bottom: 4.8rem;
+}
+
+.hero-img {
+  width: 100%;
+}
+
+.delivered-meals {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  margin-top: 8rem;
+}
+
+.delivered-imgs {
+  display: flex;
+}
+
+.delivered-imgs img {
+  height: 4.8rem;
+  width: 4.8rem;
+  border-radius: 50%;
+  margin-right: -1.6rem;
+  border: 3px solid #e9eafd;
+}
+
+.delivered-imgs img:last-child {
+  margin: 0;
+}
+
+.delivered-text {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.delivered-text span {
+  color: #0d05a0;
+  font-weight: 700;
+}
+
+/*************************/
+/* FEATURED IN SECTION */
+/************************/
+
+.section-featured {
+  padding: 4.8rem 0 3.2rem 0;
+}
+
+.heading-featured-in {
+  font-size: 1.4rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.75px;
+  text-align: center;
+  margin-bottom: 2.4rem;
+  color: #eae9fd;
+}
+
+.logos {
+  display: flex;
+  justify-content: space-around;
+}
+
+.logos img {
+  height: 3.2rem;
+  filter: brightness(0);
+  opacity: 50%;
+}
+
+
+
+/*******************/
+/* HOW IT WORKS */
+/*******************/
+
+.section-how {
+  padding: 9.6rem 0;
+}
+
+.step-number {
+  font-size: 8.6rem;
+  font-weight: 600;
+  color: #0d05a0;
+  margin-bottom: 1.2rem;
+}
+
+.step-description {
+  font-size: 1.8rem;
+  line-height: 1.8;
+}
+
+.step-img-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.step-img-box::before,
+.step-img-box::after {
+  content: "";
+  display: block;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.step-img-box::before {
+  width: 60%;
+  /* height: 60%; */
+  /* Trick to give height */
+  padding-bottom: 60%;
+  background-color: #eae9fd;
+  z-index: -2;
+}
+
+.step-img-box::after {
+  width: 45%;
+  /* Trick to give height */
+  padding-bottom: 45%;
+  background-color: #eae9fd;
+  z-index: -1;
+}
+
+.step-img {
+  width: 35%;
+}
+
+/*********************/
+/* SECTION INFO */
+/*********************/
+
+.section-info {
+  padding: 9.6rem 0;
+}
+
+.info {
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+  border-radius: 11px;
+  overflow: hidden;
+  transition: all 0.3s linear;
+}
+
+.info:hover {
+  box-shadow: 0 4.8rem 6.4rem rgba(0, 0, 0, 0.06);
+  transform: translateY(-1.2rem);
+}
+
+.info-img {
+  width: 100%;
+}
+
+.info-content {
+  padding: 3.2rem 4.8rem 4.8rem 4.8rem;
+}
+
+.info-tags {
+  display: flex;
+  gap: 0.4rem;
+  margin-bottom: 1.2rem;
+}
+
+.tag {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #eae9fd;
+  border-radius: 100px;
+}
+
+.tag-live {
+  background-color: #ee312b;
+}
+
+.tag-trending {
+  background-color: #61df1d;
+}
+
+.tag-important {
+  background-color: #a32803;
+}
+
+.info-title {
+  color: #333;
+  font-size: 2.4rem;
+  font-weight: 600;
+  margin-bottom: 3.2rem;
+}
+
+.info-icon {
+  height: 2.4rem;
+  width: 2.4rem;
+  color: #222fe6;
+}
+
+.info-attributes {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.info-attribute {
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.all-news {
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+/*********************/
+/* TESTIMONIALS */
+/*********************/
+
+.section-testimonials {
+  background-color: #eae9fd;
+  display: grid;
+  grid-template-columns: 55fr 45fr;
+  align-items: center;
+}
+
+.testimonials-container {
+  padding: 9.6rem;
+}
+
+.testimonials {
+  display: grid;
+  grid-template-columns: 3fr;
+  row-gap: 4.8rem;
+  column-gap: 5rem;
+}
+
+.testimonial-img {
+  width: 6.4rem;
+  border-radius: 50%;
+  margin-bottom: 1.2rem;
+}
+
+.testimonial-text {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  margin-bottom: 1.6rem;
+}
+
+.testimonial-name {
+  font-size: 1.6rem;
+  color: #6f6f6f;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.6rem;
+  padding: 1.6rem;
+}
+
+.gallery-item {
+  overflow: hidden;
+}
+
+.gallery-item img {
+  display: block;
+  width: 100%;
+  transition: all 0.3s linear;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.1);
+}
+
+/*******************/
+/* SLIDESHOW TESTIMONIALS */
+/*******************/
+
+
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  background: #c5d1fcf1;
+}
+
+/* Slides */
+.mySlides {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  display: none;
+  padding: 80px;
+  text-align: center;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -30px;
+  padding: 16px;
+  color: #a3a6df;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  position: absolute;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+}
+
+/* The dot/bullet/indicator container */
+.dot-container {
+  text-align: center;
+  padding: 20px;
+  background: #3f27c6;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #7cb2ef;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* Add a background color to the active dot/circle */
+.active, .dot:hover {
+  background-color: #1207a3;
+}
+
+/* Add an italic font style to all quotes */
+q {font-style: italic;}
+
+/* Add a blue color to the author */
+.author {color: cornflowerblue;}
+
+
+/*************/
+/* PRICING */
+/************/
+
+.section-pricing {
+  padding: 9.6rem 0;
+}
+
+.pricing-plan {
+  border-radius: 11px;
+  width: 75%;
+}
+
+.pricing-plan-starter {
+  justify-self: end;
+  padding: 4.6rem;
+  border: 2px solid #e9e9fd;
+}
+
+.pricing-plan-complete {
+  background-color: #e9eafd;
+  padding: 4.8rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.pricing-plan-complete::after {
+  content: "Best Value";
+  position: absolute;
+  top: 6%;
+  right: -18%;
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #333333;
+  background-color: #199dfc;
+  padding: 0.8rem 8rem;
+  transform: rotate(45deg);
+}
+
+.plan-header {
+  text-align: center;
+  margin-bottom: 4.8rem;
+}
+
+.plan-name {
+  color: #371fcf;
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.75;
+  margin-bottom: 3.2rem;
+}
+
+.plan-price {
+  font-size: 6.2rem;
+  font-weight: 600;
+  color: #333333;
+  margin-bottom: 1.6rem;
+}
+
+.plan-text {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  color: #6f6f6f;
+}
+
+.plan-sign-up {
+  text-align: center;
+  margin-top: 4.8rem;
+}
+
+.plan-details {
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+  text-align: center;
+}
+
+.feature-icon {
+  height: 3.2rem;
+  width: 3.2rem;
+  color: #2232e6;
+  background-color: #eae9fd;
+  border-radius: 50%;
+  padding: 1.6rem;
+  margin-bottom: 3.2rem;
+}
+
+.feature-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #333333;
+  margin-bottom: 1.6rem;
+}
+
+.feature-text {
+  font-size: 1.8rem;
+  line-height: 1.8;
+}
+
+/********************/
+/* CALL TO ACTION */
+/********************/
+
+* {box-sizing: border-box}
+
+/* style the container */
+.container {
+  position: relative;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px 0 30px 0;
+}
+
+/* style inputs and link buttons */
+input,
+.btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  margin: 5px 0;
+  opacity: 0.85;
+  display: inline-block;
+  font-size: 17px;
+  line-height: 20px;
+  text-decoration: none; /* remove underline from anchors */
+}
+
+input:hover,
+.btn:hover {
+  opacity: 1;
+}
+
+/* add appropriate colors to fb, twitter and google buttons */
+.fb {
+  background-color: #3B5998;
+  color: white;
+}
+
+.twitter {
+  background-color: #55ACEE;
+  color: white;
+}
+
+.google {
+  background-color: #dd4b39;
+  color: white;
+}
+
+/* style the submit button */
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* Two-column layout */
+.col {
+  float: left;
+  width: 50%;
+  margin: auto;
+  padding: 0 50px;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* vertical line */
+.vl {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  border: 2px solid #ddd;
+  height: 175px;
+}
+
+/* text inside the vertical line */
+.inner {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  padding: 8px 10px;
+}
+
+/* hide some text on medium and large screens */
+.hide-md-lg {
+  display: none;
+}
+
+/* bottom container */
+.bottom-container {
+  text-align: center;
+  background-color: #666;
+  border-radius: 0px 0px 4px 4px;
+}
+
+/* Responsive layout - when the screen is less than 650px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 650px) {
+  .col {
+    width: 100%;
+    margin-top: 0;
+  }
+  /* hide the vertical line */
+  .vl {
+    display: none;
+  }
+  /* show the hidden text on small screens */
+  .hide-md-lg {
+    display: block;
+    text-align: center;
+  }
+}
+
+.section-cta {
+  padding: 4.8rem 0 12.8rem;
+}
+
+/* .cta {
+  display: grid;
+  /* 2fr + 1fr = 3fr */
+  /* 2/3 = 66.6% 1/3 = 33.3%*/
+  /* grid-template-columns: 2fr 1fr;
+  background-image: linear-gradient(to right bottom, #4e56eb, #3222e6);
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
+  border-radius: 11px;
+  overflow: hidden;
+} */ 
+
+.cta-text-box {
+  color: #0d0a45;
+  padding: 4.8rem 6.4em 6.4rem 6.4rem;
+}
+
+.cta .heading-secondary {
+  color: #0c0a45;
+  margin-bottom: 3.2rem;
+}
+
+.cta-text {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  margin-bottom: 4.8rem;
+}
+
+.cta-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 3.2rem;
+  row-gap: 2.4rem;
+}
+
+.cta-form label {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 1.2rem;
+}
+
+.cta-form input,
+.cta-form select {
+  width: 100%;
+  padding: 1.2rem;
+  font-size: 1.8rem;
+  font-family: inherit;
+  color: inherit;
+  border: none;
+  background-color: #ebe9fd;
+  border-radius: 9px;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.cta-form input::placeholder {
+  color: #aaaaaa;
+}
+
+.cta-img {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(158, 144, 246, 0.35),
+      rgba(134, 124, 238, 0.35)
+    ),
+    url(../img/download.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.cta *:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.8rem rgba(234, 233, 253, 0.5);
+}
+
+/**************/
+/* FOOTER */
+/**************/
+
+.footer {
+  padding: 12.8rem 0;
+  border-top: 1px solid #eeeeee;
+}
+
+.grid-footer {
+  grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
+}
+
+.logo-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-logo {
+  display: block;
+  margin-bottom: 3.2rem;
+}
+
+.social-links {
+  list-style: none;
+  display: flex;
+  gap: 2.4rem;
+}
+
+.social-link {
+  height: 2.4rem;
+  width: 2.4rem;
+}
+
+.copyright {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: #767676;
+  margin-top: auto;
+}
+
+.contacts {
+  font-style: normal;
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+
+.address {
+  margin-bottom: 2.4rem;
+}
+
+.map {
+  width: 60%;
+  height: 60vh;
+  display: flex;
+  align-items: left;
+  justify-content: left;
+  flex-direction: column;
+
+}
+
+.footer-heading {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 4rem;
+}
+
+.footer-nav {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.footer-link:link,
+.footer-link:visited {
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: #767676;
+  transition: all 0.3 linear;
+}
+
+.footer-link:hover,
+.footer-link:active {
+  color: #555555;
+}
