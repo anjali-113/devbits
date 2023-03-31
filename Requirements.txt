@@ -1,0 +1,4 @@
+code .
+npm start 
+
+On running these commands on Terminal, all the dependencies and packages for running public api file (coiner.html) will be auto downloaded in the system. It was not possible to push all those into this repo.
